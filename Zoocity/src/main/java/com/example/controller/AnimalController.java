@@ -30,7 +30,7 @@ AnimalRepository animalRepo;
 public List<Animal> displayAnimalList(){
 	List<Animal> animalList = (List<Animal>) animalRepo.findAll();
 	return animalList;
-	}
+}
 
 @PostMapping("/add")
 public String addAnimal(@RequestBody Animal animal) {
@@ -50,7 +50,7 @@ public String deleteAnimal(@RequestParam("id") int id) {
 	animalRepo.deleteById(id);
 	return "Delete Successfully";
 }
-
+/*
 @GetMapping("/findByCategory")
 public List<Animal> findByCategory(@RequestParam ("category") String category){
 	List<Animal> animalList = (List<Animal>) animalRepo.findAllByCategory(category);
@@ -65,5 +65,6 @@ public Animal findByName(@RequestParam ("name") String name) {
 public List<Animal> findBySubspecie(@RequestParam ("sucspecie") String subspecie){
 	List<Animal> animalList = (List<Animal>) animalRepo.findBySubspecie(subspecie);
 	return animalList;
-	}
+	}*/
 }
+

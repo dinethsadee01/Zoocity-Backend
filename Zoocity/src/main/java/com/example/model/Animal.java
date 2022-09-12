@@ -16,7 +16,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 public class Animal {
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
-	@SequenceGenerator(name = "animal_aid_seq")
+	@SequenceGenerator(name = "animal_aid_seq", initialValue = 1)
 	@Column(name = "Animal_Id",scale = 20)
 	private int aid;
 	
